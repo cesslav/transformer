@@ -1,0 +1,31 @@
+/home/ceslav/PycharmProjects/m2m-translate/.venv/bin/python /home/ceslav/PycharmProjects/m2m-translate/transformer_v3.py 
+/home/ceslav/PycharmProjects/m2m-translate/.venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:286: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+0.5979485511779785
+2025-07-05 17:02:17.548910: epoch n0, 2025-07-05 17:02:17.548891
+2025-07-05 17:02:17.549104: train mode
+  0%|          | 0/37492126 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/ceslav/PycharmProjects/m2m-translate/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 283, in __getattr__
+    return self.data[item]
+           ~~~~~~~~~^^^^^^
+KeyError: 'device'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ceslav/PycharmProjects/m2m-translate/transformer_v3.py", line 147, in <module>
+    output = transformer(src)
+             ^^^^^^^^^^^^^^^^
+  File "/home/ceslav/PycharmProjects/m2m-translate/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ceslav/PycharmProjects/m2m-translate/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ceslav/PycharmProjects/m2m-translate/transformer_v3.py", line 68, in forward
+    device = src.device
+             ^^^^^^^^^^
+  File "/home/ceslav/PycharmProjects/m2m-translate/.venv/lib/python3.12/site-packages/transformers/tokenization_utils_base.py", line 285, in __getattr__
+    raise AttributeError
+AttributeError
